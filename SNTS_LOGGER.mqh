@@ -148,11 +148,13 @@ public:
       bool useCSV = false,
       ENUM_SNTS_LOGGER_LEVEL minimumLevel = SNTS_LOGGER_LEVEL_TRACE,
       bool logDayInTimestamp = true,
-      bool logSecInTimestamp = true
+      bool logSecInTimestamp = true,
+      string fileName = ""
    )
    {
       SNTS_LOGGER_CONFIGURATION::projectName = project;
       SNTS_LOGGER_CONFIGURATION::logToFile = fileOutput;
+      SNTS_LOGGER_CONFIGURATION::fileName = fileName;
       SNTS_LOGGER_CONFIGURATION::logToTerminal = terminalOutput;
       SNTS_LOGGER_CONFIGURATION::logToChart = chartOutput;
       SNTS_LOGGER_CONFIGURATION::csvMode = useCSV;
